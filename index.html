@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form novalidate>
+
+        <label for="mail">
+            <div class="input-with-label">
+                <span>Enter your email:</span>
+                <input type="email" id="mail" name="mail" required>
+                <span id="mail-error" class="error" aria-live="polite"></span>
+            </div>
+        </label>
+
+        <label for="country">
+            <div class="input-with-label">
+                <span>Enter your country:</span>
+                <input type="text" id="country" name="country" required minlength="2" maxlength="20" pattern="[A-Z][a-z]{1,19}">
+                <span id="country-error" class="error" aria-live="polite"></span>
+            </div>
+        </label>
+
+        <label for="zip-code">
+            <div class="input-with-label">
+                <span>Enter your zip-code:</span>
+                <input type="text" id="zip-code" name="zip-code" required pattern="[0-9]{5}-[0-9]{4}">
+                <span id="zip-code-error" class="error" aria-live="polite"></span>
+            </div>
+        </label>
+
+        <label for="password">
+            <div class="input-with-label">
+                <span>Enter your password:</span>
+                <input type="password" id="password" name="password" required>
+                <span id="password-error" class="error" aria-live="polite"></span>  
+            </div>
+        </label>
+
+        <label for="confirm-password">
+            <div class="input-with-label">
+                <span>Confirm password:</span>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <span id="confirm-password-error" class="error" aria-live="polite"></span>
+            </div>
+        </label>
+        <button id="submit-button">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
